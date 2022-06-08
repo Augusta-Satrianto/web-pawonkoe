@@ -1,0 +1,544 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background: #FFF9F9;
+}
+
+/* Navbar */
+
+.navbar{
+    background-color: #f9f1de;
+    -moz-box-shadow: 0 0 5px 5px #888;
+    -webkit-box-shadow: 0 0 5px 5px#888;
+    box-shadow: 0 0 5px 1px rgb(186, 186, 186);
+}
+
+.navbar-brand{
+    margin-left:55px;
+}
+
+.navigasi{
+    display: flex;
+    margin-left:20px;
+}
+
+.navigasi-icon{
+    font-size: 20px;
+}
+
+.navigasi-kata{
+    margin: 5px 0 0 5px;
+}
+
+.button-primary{
+    width:108px;
+    height:29px;
+    border-radius: 15px;
+    background: #EAB141;
+    color: #FFF9F9;
+    border: none;
+    font-family: montserrat, sans-serif;
+    font-weight: 600px;
+    font-size: 14px;
+}
+
+.button-secundary{
+    width:108px;
+    height:29px;
+    border-radius: 15px;
+    background: #FFF9F9;
+    color: #EAB141;
+    border: 1px solid #EAB141;
+    font-family: montserrat, sans-serif;
+    font-weight: 600px;
+    font-size: 14px
+}
+
+/* Login & SigUp*/
+
+.container-in{
+    width: 450px;
+    margin:0 auto;
+}
+
+.back-home{
+    text-decoration:none; 
+    color:#FFFFFF;
+    float:right;
+    width:150px;
+}
+
+.back-home .bi{
+    line-height:30px;
+    background:#EAB141;
+    border-radius:5px;
+}
+
+.textJudul{
+    line-height:30px;
+    font-size:24px;
+    font-family:'Montserrat', sans-serif;
+    color:#EAB141;
+}
+
+.textsubjudul{
+    font-size:16px;
+    font-family:'Montserrat', sans-serif;
+    color:#EAB141;
+}
+
+.show-hide{
+    width:30px;
+    margin-left:25px;
+}
+
+.show-hide .bi{
+    font-size: 30px;
+    color:#EAB141;
+}
+
+.border-pass{
+    background:#FFFFFF; 
+    border: 2px solid #EAB141;
+    border-radius: 6px;
+}
+
+.alert-signup{
+    position: absolute;
+}
+
+.d-grid button{
+    background-color: #EAB141!important;
+    border: #EAB141;
+}
+
+.d-grid span{
+    color: #EAB141!important;
+    font-size:14px;
+    font-family:'Montserrat', sans-serif;
+}
+
+.d-grid span a{
+    color: #EAB141!important;
+    font-size:18px;
+    font-family:'Montserrat', sans-serif;
+}
+
+/* Home & Search */
+
+.big-logo img{
+    display:block; 
+    margin:0 auto 20px;
+    width:164px;
+}
+
+.big-logo p{
+    text-align: center;
+    color:#EAB141;
+    font-size:16px;
+    font-family:montserrat;
+}
+
+.container-cari{
+    width:527px;
+    height:61px;
+    margin: auto;
+    border-radius:20px;
+    border: 1px solid #EAB141;
+    display:flex;
+    padding:0 10px;
+    background-color:#FFFFFF;
+}
+
+.container-cari img{
+    width:28px;
+    height:28px;
+    margin: auto 10px;
+}
+
+.input-cari{
+    margin:15px;
+}
+
+#cari-resep {
+    width: 348px;
+    border:none;
+    color:#EAB141;
+    background-color:#FFFFFF;
+    outline: none;
+}
+
+.input-cari button{
+    width:74px;
+    border:none;
+    line-height:28px;
+    font-size:16px;
+    color:#FFFFFF;
+    background-color:#EAB141;
+    border-radius:10px;
+}
+
+.show-category{
+    color: #424140;
+    font-family: montserrat, sans-serif;
+    font-weight: 600px;
+    font-size: 24px;
+}
+
+.resep{
+    border:1px solid #EAB141;
+    width: 255px;
+    height:300px;
+    padding-left:12px;
+    padding-top:10px;
+    border-radius:20px;
+    background:#FFFFFF;
+}
+
+.penulis-resep{
+    display: flex;
+}
+
+.penulis-resep a{
+    text-decoration: none;
+    color:#000000;
+}
+
+.penulis-photo{
+    width:35px;
+    height:35px;
+    border-radius:50%;
+    overflow:hidden;
+    margin-right:6px;
+    float:left;
+}
+
+.penulis-photo img{
+    width: 35px;
+    border-radius:50%;
+}
+
+.penulis-nama{
+    font-size: 14px;
+    margin-top:7px;
+}
+
+.penulis-nama i{
+    color: #5C93FF;
+    margin-left: 1px;
+}
+
+.resep-picture{
+    width:230px;
+    height:165px;
+    border-radius:16px;
+    margin:5px 0;
+    overflow:hidden;
+    -moz-box-shadow: 0 2px 4px rgb(172, 171, 171);
+    -webkit-box-shadow: 0 2px 4px rgb(172, 171, 171);
+    box-shadow: 0 2px 4px rgb(172, 171, 171);
+}
+
+.resep-picture img{
+    width:230px;
+    border-radius:16px;
+}
+
+.deskripsi-resep{
+    height: 70px; 
+    max-width:230px;
+    overflow:hidden;
+}
+
+.deskripsi-resep p{
+    white-space: pre-line;
+    margin:0;
+    padding:0;
+    font-size:11px;
+    font-weight:500px;
+    font-family:montserrat, sans-serif;
+}
+
+.judul-resep a{
+    text-decoration: none;
+    color:#000000;
+    font-size:15px;
+    font-family:montserrat, sans-serif;
+    font-weight: 600px;
+}
+
+.tidak-ada-resep{
+    color: #EAB141;
+}
+
+.tidak-ada-resep2{
+    color: #EAB141; 
+    transform: translate(0,-50px);
+}
+
+/* Categories */
+
+.judul-hal{
+    color:#EAB141;
+}
+
+.container-category{
+    background:#F9F1DE;
+    margin:20px auto -10px;
+    border-radius:15px;
+    width:40%;
+    padding:20px;
+    min-width: 400px;
+}
+
+.update-category{
+    float: right;
+    margin: 7px 5px 7px 0;
+}
+
+.update-category button{
+    width: 69px;
+    line-height: 25px;
+    font-size: 15px;
+    color:white;
+    background-color: #EAB141;
+    border-radius:20px;
+    border:none;
+}
+
+.cancel-category{
+    width:69px;
+    background-color:#EAB141;
+    float:right;
+    border-radius:20px;
+    text-align:center;
+    line-height:27px;
+    color:#FFFFFF;
+    text-decoration:none;
+    margin: 7px 5px 7px 0;
+}
+
+.container-category a{
+    float:right;
+    width:69px;
+    background-color:#EAB141;
+    border-radius:20px;
+    text-align:center;
+    line-height:27px;
+    color:#FFFFFF;
+    text-decoration:none;
+    margin-right:5px;
+}
+
+.category-nama{
+    overflow:hidden;
+}
+
+.category-nama p{
+    white-space: pre-line;
+    overflow:hidden;
+    font-size:15px;
+    font-family:montserrat, sans-serif;
+    font-weight: 600px;
+    margin:0;
+    padding:0;
+    max-height:100px;
+    line-height:20px;
+}
+
+.link-tambah-category{
+    text-decoration: none;
+}
+
+#tambah-category{
+    margin:30px auto 0;
+    width:155px;
+    text-align:center;
+}
+
+#edit-resep, #upload-resep, #edit-akun, #tambah-category{
+    width: 155px;
+    line-height: 34px;
+    font-size: 15px;
+    margin: 0 auto;
+    color:white;
+    background-color: #EAB141;
+    border-radius:10px;
+    border:none;
+}
+
+/*  Account */
+
+.container-akun-atas{
+    background:#F9F1DE;
+    margin:0 auto 17px;
+    border-radius:15px;
+    width:58%;
+    padding:20px;
+    min-width: 400px;
+    min-height: 150px;
+}
+
+.container-akun-atas{
+    background:#F9F1DE;
+    margin:20px auto -10px;
+    border-radius:15px;
+    width:58%;
+    padding:20px;
+    min-width: 400px;
+    height: 140px;
+}
+
+.tombol-verifikasi{
+    width:100px;
+    background-color:#EAB141;
+    float:right;
+    border-radius:20px;
+    text-align:center;
+    line-height:30px;
+    color:white;
+}
+
+.tombol-verifikasi i{
+    color: #FFFFFF;
+    margin-right: 5px;
+}
+
+.edit-akun-button{
+    width:69px;
+    background-color:#EAB141;
+    float:right;
+    border-radius:20px;
+    text-align:center;
+    line-height:27px;
+    color:white;
+}
+
+.profil{
+    display: flex;
+}
+
+.user-photo{
+    width:63px;
+    height:63px; 
+    overflow:hidden;
+    border-radius:50%;
+    margin-right:12px;
+}
+
+.user-photo img{
+    width:63px;
+}
+
+.user-username{
+    font-size: 14px;
+    margin-top:10px;
+    font-family: montserrat, sans-serif;
+}
+
+.user-username i{
+    color: #5C93FF;
+    margin-left: 1px;
+    
+}
+
+.user-name{
+    font-size: 14px;
+    font-family: montserrat, sans-serif;
+}
+
+.user-about{
+    white-space: pre-line;
+    max-width: 250px;
+    overflow: hidden;
+    font-family: montserrat, sans-serif;
+}
+
+.container-akun-atas span{
+    color:#EAB141;
+    font-size:13px;
+    font-family: montserrat, sans-serif;
+}
+
+.container-akun-cari{
+    width:58%;
+    min-width: 400px;
+    margin:0 auto;
+    color:#EAB141;
+    font-size:15px;
+    margin-bottom:35px;
+}
+
+.input-cari-resep-anda{
+    float:right;
+    border-radius:20px;
+    border:1px solid #EAB141;
+    display:flex;
+    background-color:#FFFFFF;
+}
+
+.input-cari-resep-anda img{
+    width:22px;
+    height:22px;
+    margin: auto 15px;
+}
+
+#cari-resep-anda {
+    width:275px;
+    border:none;
+    color:#EAB141;
+    margin:0 0 0 -10px;
+    background-color:#FFFFFF;
+}
+
+#cari-resep-anda:focus {
+    outline: none;
+}
+
+#cari-resep-anda:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    font: size 13px;
+}
+
+::placeholder {
+    color: #EAB141;
+    opacity: 0.5;
+    font-size: 16px; /* Firefox */
+}
+
+#cari-resep-anda::placeholder {
+    font-size: 13px; /* Firefox */
+}
+  
+  
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #EAB141;
+    opacity: 0.5;
+    font: size 16px;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: #EAB141;
+    opacity: 0.5;
+    font: size 16px;
+}
+
+#cari-resep-anda::-ms-input-placeholder { /* Microsoft Edge */
+    font: size 13px;
+}
+
+.container-akun-cari button{
+    width:57px;
+    border:none;
+    line-height:24px;
+    font-size:11px;
+    color:#FFFFFF;
+    background-color:#EAB141;
+    border-radius:15px;
+    margin:7px 15px 7px 0;
+}
+
+.container-akun-cari p{
+    margin-left: 20px;
+    font-size:16px;
+    font-family: montserrat, sans-serif;
+}
