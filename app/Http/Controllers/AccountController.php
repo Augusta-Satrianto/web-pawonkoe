@@ -13,8 +13,17 @@ class AccountController extends Controller
     {
         return view('account', [
             'title' => 'Account',
-            'posts' => Post::where('user_id', auth()->user()->id)->filter(request(['keyword']))->get(),
+            'posts' => Post::where('user_id', auth()->user()->id)->latest()->filter(request(['keyword']))->get(),
             'users' => User::where('id', auth()->user()->id)->get()
+        ]);
+    }
+
+    public function indexuser(User $user)
+    {
+        return view('account', [
+            'title' => 'User Posts',
+            'posts' => $user->posts,
+            'users' => User::where('id', $user->id)->get()
         ]);
     }
     
