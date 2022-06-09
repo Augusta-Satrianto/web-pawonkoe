@@ -2,16 +2,16 @@
 
 @section('container')
 
-  <div class="container-akun" style="background:#F9F1DE;margin:0 auto 50px;border-radius:15px;width:40%;padding:20px 40px;min-width: 400px;">
+  <div class="container-search">
     <div clas="text-center">
-        <h1 style="text-align: center;color:#EAB141;font-family:montserrat;">Search Filter</h1>
+        <h1>Search Filter</h1>
     </div>
     <form action="/search">
-      <label for="keyword" style="color: #EAB141;font-size:18px;font-family:'Montserrat', sans-serif;">Judul :</label>
-      <input type="text" name="keyword" id="keyword" placeholder="Cari Judul" autocomplete="off" value="{{ request('keyword') }}">
+      <label for="title">Judul :</label>
+      <input type="text" name="title" id="keyword" placeholder="Cari Judul" autocomplete="off" value="{{ request('title') }}">
 
-      <label for="keyword2" style="color: #EAB141;font-size:18px;font-family:'Montserrat', sans-serif;">Kategori : </label><br>
-      <select id="keyword2" name="keyword2">
+      <label for="category">Kategori : </label><br>
+      <select id="keyword2" name="category">
           <option value="" selected> - </option>
           @foreach ($categoriesAll as $category)
             @if($keyword2 == $category->name)
@@ -23,11 +23,11 @@
       </select>
       <br>
 
-      <label for="keyword3" style="color: #EAB141;font-size:18px;font-family:'Montserrat', sans-serif;">User : </label>
-      <input type="text" name="keyword3" id="keyword3" placeholder="Cari User" autocomplete="off" value="{{ request('keyword3') }}">
+      <label for="user">User : </label>
+      <input type="text" name="user" id="keyword3" placeholder="Cari User" autocomplete="off" value="{{ request('user') }}">
 
       <div class="text-center mt-2">    
-          <button type="submit" style="width:100px;border:none;line-height:28px;font-size:16px;color:#FFFFFF;background-color:#EAB141;border-radius:10px;"><i class="bi bi-search" style="font-size: 20px;"></i> Search</button>  
+          <button type="submit"><i class="bi bi-search"></i> Search</button>  
       </div>
     </form>
   </div>
