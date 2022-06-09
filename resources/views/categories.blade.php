@@ -34,7 +34,7 @@
         @isset($show)
             <div class="container-category">
                 <form action="/categories" method="post">
-                    @csrf   
+                    @csrf
                     <input class="@error('name')is-invalid @enderror" type="text" name="name" id="category-name" autocomplete="off" autofocus required value="{{ old('name') }}" placeholder="New Category">
                     @error('name')
                         <div class="invalid-feedback">
@@ -48,6 +48,7 @@
                 </form>
             </div>
         @else
+            <br>
             <a class="link-tambah-category"  href="/categories/new">
                 <div id="tambah-category">
                     New Category
