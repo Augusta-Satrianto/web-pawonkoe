@@ -2,23 +2,23 @@
 
 @section('container')
 
-    <div class="container-akun" style="background:#F9F1DE;margin:0 auto 30px;border-radius:15px;width:58%;padding:20px 50px 20px 20px;min-width: 400px;">
+    <div class="container-edit-akun">
         <form action="/edit-akun/{{ $user->username }}" method="post" enctype="multipart/form-data">
             @csrf
-            <ul style="list-style-type:none;">
+            <ul>
                 <li>
-                    <div style="margin:0 auto;width:140px;height:140px;border-radius:50%px;overflow:hidden;">
+                    <div class="label-edit-photo">
                         <label for="photo" >
-                            <img class="photo-preview" src="{{ asset('storage/' . $user->photo) }}"  alt="" style="width:140px;">
+                            <img class="photo-preview" src="{{ asset('storage/' . $user->photo) }}"  alt="">
                         </label>                                       
                     </div>
-                    <div style="margin:10px auto;width:300px;">
+                    <div class="input-edit-photo">
                         <input type="file" name="photo" id="photo" onchange="previewPhoto()">
                     </div>       
                 </li>
                 <li>
-                    <label for="name" style="color: #EAB141;font-size:18px;font-family:'Montserrat', sans-serif;">Name</label><br>
-                    <input type="text" name="name" class="@error('name')is-invalid @enderror" id="edit-name"  required value="{{ $user->name }}">
+                    <label class="input-edit" for="name">Name</label><br>
+                    <input type="text" name="name" class="@error('name')is-invalid @enderror" id="edit-name"  required value="{{ $user->name }}" autocomplete="off">
                     @error('name')
                         <div class="invalid-feedback">
                         {{ $message }}
@@ -26,8 +26,8 @@
                     @enderror
                 </li>
                 <li>
-                    <label for="username" style="color: #EAB141;font-size:18px;font-family:'Montserrat', sans-serif;margin-top:10px;">Username</label><br>
-                    <input type="text" id="edit-username" name="username" class=" @error('username')is-invalid @enderror" required value="{{ $user->username }}">
+                    <label class="input-edit bawah" for="username">Username</label><br>
+                    <input type="text" id="edit-username" name="username" class=" @error('username')is-invalid @enderror" required value="{{ $user->username }}" autocomplete="off">
                     @error('username')
                         <div class="invalid-feedback">
                         {{ $message }}
@@ -35,8 +35,8 @@
                     @enderror
                 </li>
                 <li>
-                    <label for="about" style="color: #EAB141;font-size:18px;font-family:'Montserrat', sans-serif;margin-top:10px;">About Your Recipe and Your Self</label><br>
-                    <textarea type="text" name="about" id="edit-about" rows="5" cols="50" required  style="overflow: auto;resize: none;" required value="{{ $user->about }}">{{ old('step', $user->about) }}</textarea>
+                    <label class="input-edit bawah" for="about">About Your Recipe and Your Self</label><br>
+                    <textarea type="text" name="about" id="edit-about" rows="5" cols="50" required value="{{ $user->about }}" autocomplete="off">{{ old('step', $user->about) }}</textarea>
 
                     @error('about')
                         <div class="invalid-feedback">
@@ -44,10 +44,11 @@
                         </div>
                     @enderror
                 </li>
-                <li><div style=";margin:0 auto;width:335px;display:flex;margin-top:35px;">
+                <li>
+                    <div class="tombol-edit-akun">
                         <button type="submit" name="submit" id="edit-akun">Save Changes</button>
-                        <a href="/account" style="text-decoration:none;text-align:center;"> 
-                            <div style="width: 155px; line-height: 34px; font-size: 15px;color:white; background-color: #EAB141; border-radius:10px;">
+                        <a href="/account"> 
+                            <div class="cancel">
                                 Cancel Changes
                             </div>
                         </a>
