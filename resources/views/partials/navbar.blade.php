@@ -21,7 +21,7 @@
         </button>
 
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav" style="margin-left: auto;">
+            <ul class="navbar-nav">
                 <li class="nav-item">
                     <a class="nav-link {{ ($title === "Home") ? 'active' : '' }}" aria-current="page" href="/">
                         <div class="navigasi">
