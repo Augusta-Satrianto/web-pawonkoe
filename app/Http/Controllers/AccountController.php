@@ -22,7 +22,7 @@ class AccountController extends Controller
     {
         return view('account', [
             'title' => 'User Posts',
-            'posts' => $user->posts,
+            'posts' => Post::where('user_id', $user->id)->latest()->filter(request(['keyword']))->get(),
             'users' => User::where('id', $user->id)->get()
         ]);
     }
