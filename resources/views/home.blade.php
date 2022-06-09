@@ -54,7 +54,7 @@
                   <div class="resep-picture">
                     <img src="{{ asset('storage/' . $post->picture) }}" alt="">
                   </div>
-                </a> 
+                </a>  
                 <div class="deskripsi-resep">
                   <div class="judul-resep">
                     <a href="\{{ $post->slug }}">{{ $post->title }}</a>
