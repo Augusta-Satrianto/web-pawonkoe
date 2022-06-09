@@ -1,15 +1,20 @@
 @extends('layouts.main')
 
 @section('container')
-    
+    @if($post->user_id !== $post->user->id && $post->user->isAdmin == false)
     <div class="container-post-atas">
-        <a href="/edit/{{ $post->slug}}"><div class="edit">Edit</div></a> 
+        <a href="/edit/{{ $post->slug}}">
+            <div class="edit">Edit</div>
+        </a> 
         <a href="/delete/{{ $post->slug}}">
             <div class="delete">
                 <i class="bi bi-trash-fill"> </i>Delete Recipe
             </div>
         </a>
     </div>
+    @else
+        <br><br>
+    @endif
     
     <div class="container-post-bawah">
         <div class="post-title">
