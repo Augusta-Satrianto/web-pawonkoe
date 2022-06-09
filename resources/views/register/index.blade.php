@@ -57,8 +57,7 @@
             </div>
           </label>
           @error('password')
-            <div class="invalid-feedback alert-signup">
-              <br><br>
+            <div class="invalid-feedback alert-signup mt-5">
               {{ $message }}
               <?php $down = true ?>
             </div>
