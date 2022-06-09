@@ -55,10 +55,12 @@
                     <img src="{{ asset('storage/' . $post->picture) }}" alt="">
                   </div>
                 </a> 
-
                 <div class="deskripsi-resep">
-                  <div class="judul-resep" style="max-height:55px;overflow:hidden;">
+                  <div class="judul-resep">
                     <a href="\{{ $post->slug }}">{{ $post->title }}</a>
+                    @if((strlen( $post['slug'])) <= 26)
+                      <div class="mt-2"></div>
+                    @endif               
                   </div>          
                   <p>{{ $post->ingredient }}</p>
                 </div>  
