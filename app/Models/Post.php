@@ -14,6 +14,10 @@ class Post extends Model
     
     public function scopeFilter($query, array $filters)
     {
+        if(isset($filters['title']) ? $filters['title'] : false){
+            return $query->where('title', 'like', '%' . $filters['title'] . '%');
+        }
+
         if(isset($filters['keyword']) ? $filters['keyword'] : false){
             return $query->where('title', 'like', '%' . $filters['keyword'] . '%');
         }
