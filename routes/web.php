@@ -1,7 +1,5 @@
 <?php
 
-use App\Models\Post;
-use App\Models\User;
 use App\Models\Category;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
@@ -9,6 +7,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\AccountController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\SearchController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,16 +25,7 @@ Route::get('/verified/{user:username}', [AccountController::class, 'verified'])-
 
 Route::get('/', [PostController::class,'index']);
 
-Route::get('/search', function () {
-    return view('search', [
-        'title' => 'Search', 
-        'categoriesAll' => Category::all(), 
-        'categories' => Category::filter(request(['keyword2']))->get(),
-        'keyword2' => request('keyword2'),
-        'posts' => Post::latest()->filter(request(['keyword']))->get(),
-        'users' => User::latest()->filter(request(['keyword3']))->get()
-    ]);
-})->middleware('auth');;
+Route::get('/search', [SearchController::class,'index'])->middleware('auth');
 
 Route::get('/categories', [CategoryController::class, 'index'])->middleware('admin');
 
@@ -70,8 +60,6 @@ Route::get('/edit/{post:slug}', [PostController::class, 'edit']);
 
 Route::post('/edit/{post:slug}', [PostController::class, 'update']);
 
-
-
 Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
 
 Route::post('/login', [LoginController::class, 'authenticate']);
@@ -84,23 +72,6 @@ Route::get('/register', [RegisterController::class, 'index'])->middleware('guest
 
 Route::post('/register', [RegisterController::class, 'store']);
 
-
-
-Route::get('user/{user:username}', function(User $user) {
-    return view('account', [
-        'title' => 'User Posts',
-        'posts' => $user->posts,
-        'users' => User::where('id', $user->id)->get()
-    ]);
-})->middleware('auth');
-
-Route::get('/verified/{user:username}', [AccountController::class, 'verified']);
+Route::get('/user/{user:username}', [AccountController::class, 'indexuser'])->middleware('auth');
 
 Route::get('/{post:slug}', [PostController::class, 'show'])->middleware('auth');
-
-
-
-
-
-
-
