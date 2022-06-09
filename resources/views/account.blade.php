@@ -39,7 +39,7 @@
             <div class="mb-4 user-about">{{ $user->about}}</div>
         @endforeach
 
-        <span style="color:#EAB141;font-size:13px;">MyRecipe</span>         
+        <span>MyRecipe</span>         
     </div>
 
     <div class="container-akun-cari">
@@ -57,24 +57,22 @@
     @if($posts->count())
         @foreach($posts as $post)
             <div class="container-akun-bawah">
-                <div style="width: 140px;height:100px;float:left;margin-right:10px;border-radius:10px;overflow:hidden;-moz-box-shadow: 0 2px 4px rgb(172, 171, 171);
-                    -webkit-box-shadow: 0 2px 4px rgb(172, 171, 171);
-                    box-shadow: 0 2px 4px rgb(172, 171, 171)">
-                    <img src="{{ asset('storage/' . $post->picture) }}" alt="" style="width:140px;;">
+                <div  class="post-picture">
+                    <img src="{{ asset('storage/' . $post->picture) }}" alt="">
                 </div>
-                <div class="crud" style="display:flex;float:right;position:relative;">
-                    <ul style="list-style-type: none;">
-                        <li><a href="\{{ $post->slug }}" style="float:right;width:69px;background-color:#EAB141;float:right;border-radius:20px;text-align:center;line-height:27px;color:#FFFFFF;text-decoration:none;margin-right:5px;">Lihat</a></li>
+                <div class="crud">
+                    <ul>
+                        <li><a href="\{{ $post->slug }}">Lihat</a></li>
                         @if($post->user_id == auth()->user()->id || auth()->user()->isAdmin)
-                        <li><a href="/edit/{{ $post->slug }}" style="float:right;width:69px;background-color:#EAB141;float:right;border-radius:20px;text-align:center;line-height:27px;color:#FFFFFF;text-decoration:none;margin-right:5px;">Edit</a></li>
-                        <li><a href="/delete/{{ $post->slug }}" onclick="return confirm('Apakah anda ingin menghapus resep ini?');" style="float:right;width:69px;background-color:#EAB141;float:right;border-radius:20px;text-align:center;line-height:27px;color:#FFFFFF;text-decoration:none;margin-right:5px;">Delete</a></li>
+                        <li><a href="/edit/{{ $post->slug }}">Edit</a></li>
+                        <li><a href="/delete/{{ $post->slug }}" onclick="return confirm('Apakah anda ingin menghapus resep ini?');">Delete</a></li>
                         @endif                      
                     </ul>                
                 </div>
 
-                <div style="height: 102px;overflow:hidden;">
-                    <div style="white-space: pre-line;overflow:hidden;font-size:15px;font-family:montserrat, sans-serif;font-weight: 600px;margin:0;padding:0;max-height:100px;line-height:20px;">{{ $post->title }}</div>             
-                    <div style="white-space: pre-line;margin:0;padding:0;font-size:11px;font-weight:500px;font-family:montserrat, sans-serif;overflow:hidden;max-height:52px;margin-top:3px;">{{ $post->ingredient }}</div>
+                <div class="post-isi">
+                    <div class="title">{{ $post->title }}</div>             
+                    <div class="ingredient">{{ $post->ingredient }}</div>
                 </div>                             
             </div>
 
