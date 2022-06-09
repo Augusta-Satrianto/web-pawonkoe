@@ -45,7 +45,12 @@
     <div class="container-akun-cari">
         <div class="input-cari-resep-anda">
           <img src="../img/cari.png" alt="">
-          <form action="/account">
+          @if($title == 'Account')
+            <form action="/account">
+          @else
+            <form action="/user/{{ $user->username }}">
+          @endif        
+            @csrf
             <input type="text" name="keyword" id="cari-resep-anda" placeholder=" Cari Resep, Makanan, dan Minuman" autocomplete="off" value="{{ request('keyword') }}">
             <button type="submit" name="cari-resep-anda">Search</button>
           </form>
