@@ -32,9 +32,9 @@
     </form>
   </div>
 
-
+  <?php $adaResep2 = false; ?>
     @foreach($categories as $category)
-      <?php $adaResep = false; $adaResep2 = false; ?>
+      <?php $adaResep = false;?>
       @foreach($posts as $post)
         @foreach($users as $user)
           @if($post->category_id == $category->id && $post->user_id == $user->id)
@@ -90,7 +90,8 @@
           @endforeach
         @endforeach
       </section>
-    @endforeach   
+    @endforeach
+  
   @if($adaResep2 == false)
     <p class="text-center fs-5 tidak-ada-resep2">Tidak ada resep yang sesuai dengan keyword tersebut.</p>  
   @endif
